@@ -105,55 +105,35 @@ tantivy = { version = "0.24.1" }
 num_enum = "0.7.3"
 flowy-sqlite-vec = { path = "flowy-sqlite-vec" }
 
-# Please using the following command to update the revision id
-# Current directory: frontend
-# Run the script.add_workspace_members:
-# scripts/tool/update_client_api_rev.sh  new_rev_id
-# ⚠️⚠️⚠️️
-client-api = { git = "https://github.com/AppFlowy-IO/AppFlowy-Cloud", rev = "592f644" }
-client-api-entity = { git = "https://github.com/AppFlowy-IO/AppFlowy-Cloud", rev = "592f644" }
-workspace-template = { git = "https://github.com/AppFlowy-IO/AppFlowy-Cloud", rev = "592f644" }
+# Using local repos for offline builds
+client-api = { path = "../../../AppFlowy-Cloud/libs/client-api" }
+client-api-entity = { path = "../../../AppFlowy-Cloud/libs/client-api-entity" }
+workspace-template = { path = "../../../AppFlowy-Cloud/libs/workspace-template" }
 
 [profile.dev]
 opt-level = 0
-lto = false
-codegen-units = 16
 debug = true
 
 [profile.release]
-lto = true
-opt-level = 3
-codegen-units = 1
+opt-level = "s"
+debug = false
+lto = "thin"
+incremental = true
 
 [profile.profiling]
 inherits = "release"
 debug = true
-codegen-units = 16
-lto = false
-
 #strip = "debuginfo"
 incremental = true
 
 [patch.crates-io]
-# We're using a specific commit here because rust-rocksdb doesn't publish the latest version that includes the memory alignment fix.
-# For more details, see https://github.com/rust-rocksdb/rust-rocksdb/pull/868
-rocksdb = { git = "https://github.com/rust-rocksdb/rust-rocksdb", rev = "1710120e4549e04ba3baa6a1ee5a5a801fa45a72" }
-# Please use the following script to update collab.
-# Working directory: frontend
-#
-# To update the commit ID, run:
-# scripts/tool/update_collab_rev.sh new_rev_id
-#
-# To switch to the local path, run:
-# scripts/tool/update_collab_source.sh
-# ⚠️⚠️⚠️️
-collab = { version = "0.2", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-collab-entity = { version = "0.2", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-collab-folder = { version = "0.2", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-collab-document = { version = "0.2", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-collab-database = { version = "0.2", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-collab-plugins = { version = "0.2", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-collab-user = { version = "0.2", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-collab-importer = { version = "0.1", git = "https://github.com/AppFlowy-IO/AppFlowy-Collab", rev = "4dfccef" }
-
-langchain-rust = { version = "4.6.0", git = "https://github.com/appflowy/langchain-rust", branch = "af" }
+rocksdb = { path = "../../../rust-rocksdb" }
+collab = { version = "0.2", path = "../../../AppFlowy-Collab/collab" }
+collab-entity = { version = "0.2", path = "../../../AppFlowy-Collab/collab-entity" }
+collab-folder = { version = "0.2", path = "../../../AppFlowy-Collab/collab-folder" }
+collab-document = { version = "0.2", path = "../../../AppFlowy-Collab/collab-document" }
+collab-database = { version = "0.2", path = "../../../AppFlowy-Collab/collab-database" }
+collab-plugins = { version = "0.2", path = "../../../AppFlowy-Collab/collab-plugins" }
+collab-user = { version = "0.2", path = "../../../AppFlowy-Collab/collab-user" }
+collab-importer = { version = "0.1", path = "../../../AppFlowy-Collab/collab-importer" }
+langchain-rust = { version = "4.6.0", path = "../../../langchain-rust" }

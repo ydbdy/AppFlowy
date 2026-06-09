@@ -16,9 +16,7 @@ dependencies:
   appflowy_backend:
     path: packages/appflowy_backend
   appflowy_board:
-    git:
-      url: https://github.com/AppFlowy-IO/appflowy-board.git
-      ref: e8317c0d1af8d23dc5707b02ea43864536b6de91
+    path: ../../../../AppFlowy-Board
   appflowy_editor:
   appflowy_editor_plugins:
   appflowy_popover:
@@ -37,11 +35,7 @@ dependencies:
   bloc: ^9.0.0
   cached_network_image: ^3.3.0
   calendar_view:
-    git:
-      url: https://github.com/Xazin/flutter_calendar_view
-      ref: "6fe0c98"
-  collection: ^1.17.1
-  connectivity_plus: ^5.0.2
+    path: ../../../../calendar_view
   cross_file: ^0.3.4+1
 
   # Desktop Drop uses Cross File (XFile) data type
@@ -73,11 +67,7 @@ dependencies:
   flutter_chat_core: 0.0.2
   flutter_chat_ui: ^2.0.0-dev.1
   flutter_emoji_mart:
-    git:
-      url: https://github.com/LucasXu0/emoji_mart.git
-      ref: "355aa56"
-  flutter_math_fork: ^0.7.3
-  flutter_slidable: ^3.0.0
+    path: ../../../../flutter_emoji_mart
 
   flutter_staggered_grid_view: ^0.7.0
   flutter_tex: ^4.0.9
@@ -178,82 +168,49 @@ dependency_overrides:
   device_info_plus: ^11.2.2
 
   url_protocol:
-    git:
-      url: https://github.com/LucasXu0/flutter_url_protocol.git
-      commit: 737681d
+    path: ../../../../url_protocol
 
   appflowy_editor:
-    git:
-      url: https://github.com/AppFlowy-IO/appflowy-editor.git
-      ref: "470c4e7"
+    path: ../../../../AppFlowy-Editor
 
   appflowy_editor_plugins:
-    git:
-      url: https://github.com/AppFlowy-IO/AppFlowy-plugins.git
-      path: "packages/appflowy_editor_plugins"
-      ref: "4efcff7"
+    path: ../../../../AppFlowy-Plugins/packages/appflowy_editor_plugins
 
   sheet:
-    git:
-      url: https://github.com/jamesblasco/modal_bottom_sheet
-      ref: e44458d
-      path: sheet
+    path: ../../../../modal_bottom_sheet/sheet
 
   window_manager:
-    git:
-      url: https://github.com/leanflutter/window_manager.git
-      ref: "5a43aed"
-      path: packages/window_manager
+    path: ../../../../window_manager/packages/window_manager
 
   uuid: ^4.4.0
 
   flutter_cache_manager:
-    git:
-      url: https://github.com/LucasXu0/flutter_cache_manager.git
-      commit: fbab857b1b1d209240a146d32f496379b9f62276
-      path: flutter_cache_manager
+    path: ../../../../flutter_cache_manager/flutter_cache_manager
 
   flutter_sticky_header: ^0.7.0
 
   reorderable_tabbar:
-    git:
-      url: https://github.com/LucasXu0/reorderable_tabbar
-      ref: 93c4977
+    path: ../../../../reorderable_tabbar
   # Don't upgrade file_picker until the issue is fixed
   # https://github.com/miguelpruivo/flutter_file_picker/issues/1652
   file_picker: 8.1.4
 
   auto_updater:
-    git:
-      url: https://github.com/LucasXu0/auto_updater.git
-      path: packages/auto_updater
-      ref: 1d81a824f3633f1d0200ba51b78fe0f9ce429458
+    path: ../../../../auto_updater/packages/auto_updater
 
   auto_updater_macos:
-    git:
-      url: https://github.com/LucasXu0/auto_updater.git
-      path: packages/auto_updater_macos
-      ref: 1d81a824f3633f1d0200ba51b78fe0f9ce429458
+    path: ../../../../auto_updater/packages/auto_updater_macos
 
   auto_updater_platform_interface:
-    git:
-      url: https://github.com/LucasXu0/auto_updater.git
-      path: packages/auto_updater_platform_interface
-      ref: 1d81a824f3633f1d0200ba51b78fe0f9ce429458
+    path: ../../../../auto_updater/packages/auto_updater_platform_interface
 
   unsplash_client:
-    git:
-      url: https://github.com/LucasXu0/unsplash_client.git
-      ref: a8411fc
+    path: ../../../../unsplash_client
 
   # https://github.com/LucasXu0/flutter-permission-handler/commit/faef1c97970de29995642bfae61b884591798684
   # Prevent the location from being accessed continuously on Windows
   permission_handler:
-    git:
-      url: https://github.com/LucasXu0/flutter-permission-handler.git
-      path: permission_handler
-      ref: faef1c9
-
+    path: ../../../../permission_handler/permission_handler
 flutter:
   generate: true
   uses-material-design: true
