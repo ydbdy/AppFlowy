@@ -16,7 +16,9 @@ dependencies:
   appflowy_backend:
     path: packages/appflowy_backend
   appflowy_board:
-    path: ../../../../AppFlowy-Board
+    git:
+      url: https://github.com/ydbdy/AppFlowy-Board.git
+      ref: 804d7898ac0becabf73e45527baf5d5c573cd6bb
   appflowy_editor:
   appflowy_editor_plugins:
   appflowy_popover:
@@ -33,9 +35,10 @@ dependencies:
   # BitsDojo Window for Windows
   bitsdojo_window: ^0.1.6
   bloc: ^9.0.0
-  cached_network_image: ^3.3.0
   calendar_view:
-    path: ../../../../calendar_view
+    git:
+      url: https://github.com/Xazin/flutter_calendar_view.git
+      ref: 6fe0c98
   cross_file: ^0.3.4+1
 
   # Desktop Drop uses Cross File (XFile) data type
@@ -168,49 +171,81 @@ dependency_overrides:
   device_info_plus: ^11.2.2
 
   url_protocol:
-    path: ../../../../url_protocol
+    git:
+      url: https://github.com/LucasXu0/flutter_url_protocol.git
+      ref: 77a8420
 
   appflowy_editor:
-    path: ../../../../AppFlowy-Editor
+    git:
+      url: https://github.com/ydbdy/AppFlowy-Editor.git
+      ref: 6fbe7ba442ad942d6f18884f0a0c8278c524fa05
 
   appflowy_editor_plugins:
-    path: ../../../../AppFlowy-Plugins/packages/appflowy_editor_plugins
+    git:
+      url: https://github.com/ydbdy/AppFlowy-Plugins.git
+      ref: 9fe683f1efd1ee0ff69417d44d37bea5fd813225
+      path: packages/appflowy_editor_plugins
 
   sheet:
-    path: ../../../../modal_bottom_sheet/sheet
+    git:
+      url: https://github.com/jamesblasco/modal_bottom_sheet.git
+      path: sheet
+      ref: e44458d
 
   window_manager:
-    path: ../../../../window_manager/packages/window_manager
+    git:
+      url: https://github.com/leanflutter/window_manager.git
+      path: packages/window_manager
+      ref: 5a43aed
 
   uuid: ^4.4.0
 
   flutter_cache_manager:
-    path: ../../../../flutter_cache_manager/flutter_cache_manager
+    git:
+      url: https://github.com/LucasXu0/flutter_cache_manager.git
+      path: flutter_cache_manager
+      ref: fbab857b1b1d209240a146d32f496379b9f62276
 
   flutter_sticky_header: ^0.7.0
 
   reorderable_tabbar:
-    path: ../../../../reorderable_tabbar
+    git:
+      url: https://github.com/LucasXu0/reorderable_tabbar.git
+      ref: 93c4977
   # Don't upgrade file_picker until the issue is fixed
   # https://github.com/miguelpruivo/flutter_file_picker/issues/1652
   file_picker: 8.1.4
 
   auto_updater:
-    path: ../../../../auto_updater/packages/auto_updater
+    git:
+      url: https://github.com/LucasXu0/auto_updater.git
+      path: packages/auto_updater
+      ref: 1d81a824f3633f1d0200ba51b78fe0f9ce429458
 
   auto_updater_macos:
-    path: ../../../../auto_updater/packages/auto_updater_macos
+    git:
+      url: https://github.com/LucasXu0/auto_updater.git
+      path: packages/auto_updater_macos
+      ref: 1d81a824f3633f1d0200ba51b78fe0f9ce429458
 
   auto_updater_platform_interface:
-    path: ../../../../auto_updater/packages/auto_updater_platform_interface
+    git:
+      url: https://github.com/LucasXu0/auto_updater.git
+      path: packages/auto_updater_platform_interface
+      ref: 1d81a824f3633f1d0200ba51b78fe0f9ce429458
 
   unsplash_client:
-    path: ../../../../unsplash_client
+    git:
+      url: https://github.com/LucasXu0/unsplash_client.git
+      ref: a8411fc
 
   # https://github.com/LucasXu0/flutter-permission-handler/commit/faef1c97970de29995642bfae61b884591798684
   # Prevent the location from being accessed continuously on Windows
   permission_handler:
-    path: ../../../../permission_handler/permission_handler
+    git:
+      url: https://github.com/LucasXu0/flutter-permission-handler.git
+      path: permission_handler
+      ref: faef1c97970de29995642bfae61b884591798684
 flutter:
   generate: true
   uses-material-design: true

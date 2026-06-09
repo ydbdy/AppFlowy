@@ -105,10 +105,10 @@ tantivy = { version = "0.24.1" }
 num_enum = "0.7.3"
 flowy-sqlite-vec = { path = "flowy-sqlite-vec" }
 
-# Using local repos for offline builds
-client-api = { path = "../../../AppFlowy-Cloud/libs/client-api" }
-client-api-entity = { path = "../../../AppFlowy-Cloud/libs/client-api-entity" }
-workspace-template = { path = "../../../AppFlowy-Cloud/libs/workspace-template" }
+# Pinned git dependencies for reproducible builds
+client-api = { git = "https://github.com/ydbdy/AppFlowy-Cloud", rev = "592f644a24beb159d45f25a4cabc34621ef7382c" }
+client-api-entity = { git = "https://github.com/ydbdy/AppFlowy-Cloud", rev = "592f644a24beb159d45f25a4cabc34621ef7382c" }
+workspace-template = { git = "https://github.com/ydbdy/AppFlowy-Cloud", rev = "592f644a24beb159d45f25a4cabc34621ef7382c" }
 
 [profile.dev]
 opt-level = 0
@@ -127,13 +127,13 @@ debug = true
 incremental = true
 
 [patch.crates-io]
-rocksdb = { path = "../../../rust-rocksdb" }
-collab = { version = "0.2", path = "../../../AppFlowy-Collab/collab" }
-collab-entity = { version = "0.2", path = "../../../AppFlowy-Collab/collab-entity" }
-collab-folder = { version = "0.2", path = "../../../AppFlowy-Collab/collab-folder" }
-collab-document = { version = "0.2", path = "../../../AppFlowy-Collab/collab-document" }
-collab-database = { version = "0.2", path = "../../../AppFlowy-Collab/collab-database" }
-collab-plugins = { version = "0.2", path = "../../../AppFlowy-Collab/collab-plugins" }
-collab-user = { version = "0.2", path = "../../../AppFlowy-Collab/collab-user" }
-collab-importer = { version = "0.1", path = "../../../AppFlowy-Collab/collab-importer" }
-langchain-rust = { version = "4.6.0", path = "../../../langchain-rust" }
+rocksdb = { git = "https://github.com/rust-rocksdb/rust-rocksdb", rev = "1710120e4549e04ba3baa6a1ee5a5a801fa45a72" }
+collab = { version = "0.2", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+collab-entity = { version = "0.2", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+collab-folder = { version = "0.2", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+collab-document = { version = "0.2", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+collab-database = { version = "0.2", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+collab-plugins = { version = "0.2", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+collab-user = { version = "0.2", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+collab-importer = { version = "0.1", git = "https://github.com/ydbdy/AppFlowy-Collab", rev = "4dfccefb9e4fd35240107b93fb4b5966295b452e" }
+langchain-rust = { version = "4.6.0", git = "https://github.com/ydbdy/langchain-rust", rev = "9a319193352331fa4e5ff1dd4de43a0fbc5d0cbd" }
